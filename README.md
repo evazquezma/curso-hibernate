@@ -1,3 +1,4 @@
+Contenido:
 hibernate001: Ejemplo básico con configuración por XML
 hibernate002: Ejemplo básico con configuración por anotaciones
 hibernate003: Ejercicio sobre los métodos de la sesion
