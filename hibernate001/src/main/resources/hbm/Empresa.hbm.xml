@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.pruebas.hibernate.model.Empresa" table="EMPRESA">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="nombre" type="java.lang.String">
+			<column name="NOMBRE" />
+		</property>
+		<property name="cif" type="java.lang.String">
+			<column name="CIF" />
+		</property>
+		
+
+		<set name="departamentos" cascade="all" lazy="false">
+			<key column="ID_ALUMNO" />
+			<one-to-many class="es.pruebas.hibernate.model.Departamento" />
+		</set>
+	</class>
+</hibernate-mapping>

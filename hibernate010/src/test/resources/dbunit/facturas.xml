@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <FACTURA id="1" numero="2014-0001" tipo="NORMAL" valor="100.0"/>
+  <FACTURA id="2" numero="2014-0002" tipo="NORMAL" valor="200.0"/>
+  <FACTURA id="3" numero="2014-0003" tipo="COMPLEMENTARIA" valor="20.0"/>
+  <FACTURA id="4" numero="2014-0004" tipo="NEGATIVA" valor="30.0"/>
+</dataset>

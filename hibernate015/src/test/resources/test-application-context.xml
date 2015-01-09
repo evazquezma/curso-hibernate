@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" 
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	   		http://www.springframework.org/schema/tx 
+	   		http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+			http://www.springframework.org/schema/aop 
+			http://www.springframework.org/schema/aop/spring-aop-3.1.xsd		   
+			http://www.springframework.org/schema/util 
+			http://www.springframework.org/schema/util/spring-util-3.1.xsd
+			http://www.springframework.org/schema/jdbc 		
+			http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd"
+	default-lazy-init="false">
+			
+	<!-- Activates various annotations to be detected in bean classes -->
+	<context:annotation-config />
+	<context:component-scan base-package="es.pruebas.hibernate" />
+	
+	
+	
+	<jdbc:embedded-database id="dataSource" type="HSQL"/>
+        
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" lazy-init="false" >		
+    	<property name="packagesToScan">
+    		<list>    			
+    			<value>es.pruebas.hibernate.model*</value>    			
+    		</list>
+    	</property>    		
+		
+		<property name="dataSource" ref="dataSource"/>
+		
+        <property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>					
+				<prop key="hibernate.validator.apply_to_ddl">false</prop> 
+				<prop key="hibernate.validator.autoregister_listeners">false</prop>						
+			</props>
+		</property>
+    </bean>
+    
+
+
+	<tx:annotation-driven/>
+	    
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager" >
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+           
+    
+</beans>

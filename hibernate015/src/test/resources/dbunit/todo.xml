@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <CIUDAD Id="1" fechaFundacion="1800-01-01 00:00:00.0" nombre="Arkham City" poblacion="100000"/>
+  <CIUDAD Id="2" fechaFundacion="1850-01-01 00:00:00.0" nombre="Gotham City" poblacion="50000"/>
+  <CIUDAD Id="3" fechaFundacion="1870-01-01 00:00:00.0" nombre="Metropolis" poblacion="200000"/>
+  <CIUDAD Id="4" fechaFundacion="1870-01-01 00:00:00.0" nombre="Genosha" poblacion="200000"/>
+  <CIUDAD Id="5" fechaFundacion="1900-01-01 00:00:00.0" nombre="Ciudad Capital" poblacion="200000"/>
+  <CIUDAD Id="6" fechaFundacion="1920-01-01 00:00:00.0" nombre="Springfield" poblacion="50000"/>
+  <CIUDAD Id="7" fechaFundacion="1930-01-01 00:00:00.0" nombre="Ogdenville" poblacion="4000"/>
+  <ALCALDE Id="1" juiciosPorCorrupcion="23" nombre="Arkhan City Mayor" numeroMandatos="3" idCiudad="1"/>
+  <ALCALDE Id="2" juiciosPorCorrupcion="0" nombre="Batman" numeroMandatos="2" idCiudad="2"/>
+  <ALCALDE Id="3" juiciosPorCorrupcion="0" nombre="Superman" numeroMandatos="0" idCiudad="3"/>
+  <ALCALDE Id="4" juiciosPorCorrupcion="0" nombre="Profesor X" numeroMandatos="3" idCiudad="4"/>
+  <ALCALDE Id="5" juiciosPorCorrupcion="10" nombre="Ciudad capital Mayor" numeroMandatos="1" idCiudad="5"/>
+  <ALCALDE Id="6" juiciosPorCorrupcion="99" nombre="Joe Diamond Quimbi" numeroMandatos="5" idCiudad="6"/>
+  <ALCALDE Id="7" juiciosPorCorrupcion="0" nombre="Ogden Mayor" numeroMandatos="0" idCiudad="7"/>
+  <MONUMENTO Id="1" anhoInauguracion="1900" nombre="Gran asilo 1" numVisitantes="20000" idCiudad="1"/>
+  <MONUMENTO Id="2" anhoInauguracion="1910" nombre="Gran asilo 2" numVisitantes="40000" idCiudad="1"/>
+  <MONUMENTO Id="3" anhoInauguracion="1920" nombre="Gran asilo 3" numVisitantes="60000" idCiudad="1"/>
+  <MONUMENTO Id="4" anhoInauguracion="1920" nombre="Daily Planet" numVisitantes="60000" idCiudad="3"/>
+  <MONUMENTO Id="5" anhoInauguracion="1970" nombre="Mono rail" numVisitantes="70000" idCiudad="6"/>
+  <MONUMENTO Id="6" anhoInauguracion="1910" nombre="Estatua Jebediah Springield" numVisitantes="70000" idCiudad="6"/>
+</dataset>

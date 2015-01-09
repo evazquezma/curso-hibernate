@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="es.pruebas.hibernate.model.Departamento" table="DEPARTAMENTO">
+        <id name="id" type="java.lang.Long" access="field">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="java.lang.String" access="field">
+            <column name="TELEFONO" />
+        </property>
+    </class>
+</hibernate-mapping>
